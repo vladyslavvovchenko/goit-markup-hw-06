@@ -198,6 +198,11 @@ fill: var(--accent-hover-color);
 
 /* button */
 
+button{
+  border: 0;
+  padding: 0;
+}
+
 .button {
   margin-top: 30px;
   display: block;
@@ -551,7 +556,7 @@ width: 206px;
   border-radius: 4px;
 }
 
-.modal-button{
+.close-button{
   position: absolute;
   top: 8px;
   right: 8px;
@@ -563,6 +568,10 @@ width: 206px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primery-white-color);
+}
+
+.close-button:hover{
+  fill: var(--accent-hover-color);
 }
 
 /* form */
@@ -595,7 +604,7 @@ width: 206px;
 }
 
 .input-pos{
-position: relative;
+  position: relative;
 }
 
 input {
@@ -608,16 +617,31 @@ padding: 0;
   min-height: 40px;
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  /* background-color: red; */
+  border-radius: 4px;  
+  transition: border var(--main-tranzitions);
 }
+
+.input-pad{
+  padding-left: 42px;
+}
+
+.input:focus {
+  border: 1px solid var(--accent-hover-color); outline: none;
+}
+.input:focus+.icon {
+  fill: var(--accent-hover-color);
+}
+
 
 .icon{
   display: block;
   position: absolute;
   transform: translatey(-50%);
   top: 50%;
-  left: 15px;
+  left: 12px;
+  transition: fill var(--main-tranzitions);
+  width: 18px;
+  height: 18px;
 }
 
 textarea{
@@ -666,12 +690,14 @@ textarea::placeholder{
   width: 16px;
   height: 15px;
   margin-right: 8px;
+  border-radius: 2px;
   background-color: #ffffff;
   background-image: url(../images/checkbox.svg);
 }
 
 .checkbox-link{
   color: var(--accent-hover-color);
+  text-decoration: underline;
 }
 
 
