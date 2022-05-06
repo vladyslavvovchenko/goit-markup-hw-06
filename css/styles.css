@@ -609,6 +609,7 @@ width: 206px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primery-white-color);
+  transition: fill var(--main-tranzitions);
 }
 
 .close-button:hover{
